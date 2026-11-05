@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charles Adrian Atienza – Automation Specialist</title>
+  <meta name="description" content="Automation specialist building reliable workflows in Zapier, Make and n8n, extended with Node.js. Open to freelance projects and full-time roles.">
+
+  <!-- Link previews (LinkedIn, Slack, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Charles Adrian Atienza – Automation Specialist">
+  <meta property="og:description" content="Reliable workflows in Zapier, Make and n8n, extended with Node.js.">
+  <!-- After you publish, uncomment and put your real site address:
+  <meta property="og:image" content="https://YOUR-SITE-ADDRESS/images/profile.jpg">
+  -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1F3F'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ECA%3C/text%3E%3C/svg%3E">
+
+  <script>
+    document.documentElement.classList.add('js');
+    try{if(localStorage.getItem('theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}
+    // Safety net: if main.js ever fails to load, show everything anyway.
+    setTimeout(function(){if(!window.__siteReady)document.documentElement.classList.remove('js')},2500);
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="#top" class="brand">
+        <span class="brand-name">Charles Adrian Atienza</span>
+        <span class="brand-role">Automation Specialist</span>
+      </a>
+      <div class="nav-right">
+        <nav id="site-nav" aria-label="Main">
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="nav-contact">Contact</a>
+        </nav>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path class="m-top" d="M4 7h16"/><path class="m-mid" d="M4 12h16"/><path class="m-bot" d="M4 17h16"/></svg>
+        </button>
+        <a class="btn btn-small header-cta" href="#contact">Contact me</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="availability"><span class="dot" aria-hidden="true"></span>Open to freelance projects and full-time roles</p>
+          <h1>Automate the repetitive work that slows your team down.</h1>
+          <p class="lede">I build reliable workflows across Zapier, HubSpot and Airtable, and write custom code when a no-code tool reaches its limits.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Get in touch</a>
+            <a class="btn btn-quiet" href="#work">View my work</a>
+            <a class="text-link" href="resume.pdf" data-resume hidden download>Download CV</a>
+          </div>
+        </div>
+
+        <figure class="canvas" aria-label="Example workflow: a webhook receives a form entry, a Node.js step cleans the data, HubSpot creates a contact, and Slack notifies sales">
+          <figcaption class="canvas-bar">
+            <span>Lead intake workflow</span>
+            <span class="canvas-note">Example</span>
+          </figcaption>
+          <div class="canvas-area">
+            <ol class="flow">
+              <li class="node">
+                <span class="port in" aria-hidden="true"></span>
+                <span class="node-kind">Trigger</span>
+                <span class="node-name">New form entry</span>
+                <span class="node-app">Webhook</span>
+                <span class="port out" aria-hidden="true"></span>
+              </li>
+              <li class="node node-code">
+                <span class="port in" aria-hidden="true"></span>
+                <span class="node-kind">Code</span>
+                <span class="node-name">Clean and format data</span>
+                <span class="node-app">Node.js</span>
+                <span class="port out" aria-hidden="true"></span>
+              </li>
+              <li class="node">
+                <span class="port in" aria-hidden="true"></span>
+                <span class="node-kind">Action</span>
+                <span class="node-name">Create contact</span>
+                <span class="node-app">HubSpot</span>
+                <span class="port out" aria-hidden="true"></span>
+              </li>
+              <li class="node">
+                <span class="port in" aria-hidden="true"></span>
+                <span class="node-kind">Action</span>
+                <span class="node-name">Notify sales</span>
+                <span class="node-app">Slack</span>
+                <span class="port out" aria-hidden="true"></span>
+              </li>
+            </ol>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PLATFORMS: add or remove tools freely -->
+    <section class="platforms" aria-labelledby="platforms-title">
+      <div class="wrap platforms-inner">
+        <h2 id="platforms-title" class="platforms-title">Platforms I build on</h2>
+        <ul class="tool-list">
+          <li>Zapier</li>
+          <li>HubSpot</li>
+          <li>Airtable</li>
+          <li>n8n</li>
+          <li>Asana</li>
+          <li>Slack</li>
+          <li>Google Workspace</li>
+          <li>REST APIs &amp; webhooks</li>
+          <li>Node.js</li>
+          <li>Python</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WORK: projects are added in projects.js, not here -->
+    <section class="section section-alt" id="work">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <h2>Selected work</h2>
+          <p class="section-intro">Automations I built as a Junior Tech Specialist. Client names, data and screenshots are left out on purpose.</p>
+        </div>
+        <div id="project-list" class="project-list" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <h2>Experience</h2>
+        </div>
+        <div class="exp-grid">
+          <ol class="roles">
+            <li class="role" data-reveal>
+              <div class="role-head">
+                <h3>Junior Tech Specialist</h3>
+                <p class="role-org">The Professional Builder</p>
+                <p class="role-dates">2025 – 2026, remote</p>
+              </div>
+              <ul class="role-points">
+                <li>Built 25+ automations across HubSpot, Airtable, Zapier and Slack that generate contracts, client assets and team alerts, replacing 30–60 minutes of manual prep per contract.</li>
+                <li>Connected CRMs, cloud drives and task boards with REST APIs and webhooks, so data synced in real time without manual copying.</li>
+                <li>Audited Airtable bases and HubSpot properties across the business, fixing schemas, formulas and time zone errors.</li>
+                <li>Set up scheduled post-delivery workflows and Asana tracking boards, saving the team 10+ hours of admin per week.</li>
+                <li>Handled IT onboarding, password vaults and 2FA access for 25+ staff across Australia and New Zealand.</li>
+              </ul>
+            </li>
+            <li class="role" data-reveal>
+              <div class="role-head">
+                <h3>Head Video Editor</h3>
+                <p class="role-org">Hey Matt!</p>
+                <p class="role-dates">2023 – 2025</p>
+              </div>
+              <ul class="role-points">
+                <li>Set up asset management and production workflows so 15+ videos a month shipped on time across all major social platforms.</li>
+                <li>Managed client deadlines and created branding assets for client channels.</li>
+              </ul>
+            </li>
+          </ol>
+          <aside class="credentials" data-reveal style="--d:1">
+            <h3>Education</h3>
+            <p class="cred-main">BS Computer Science, specialising in Machine Learning</p>
+            <p class="cred-sub">National University – Dasmariñas</p>
+            <h3>Certifications and awards</h3>
+            <ul class="cred-list">
+              <li><span class="cred-main">IT Specialist – Databases</span><span class="cred-sub">Certiport, 2024</span></li>
+              <li><span class="cred-main">Data Analytics and Visualization Essentials</span><span class="cred-sub">DICT, 2025</span></li>
+              <li><span class="cred-main">Top 8, Hack4A Progress</span><span class="cred-sub">DOST Calabarzon, 2024</span></li>
+              <li><span class="cred-main">InnOlympics: GDSC PLM Hackathon</span><span class="cred-sub">Google Developer Student Club PLM, 2025</span></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section-alt" id="services">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <h2>Services</h2>
+          <p class="section-intro">Automations that move data between your systems reliably, so your team stops copying and pasting.</p>
+        </div>
+        <ul class="services">
+          <li data-reveal style="--d:0">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="6" rx="1.5"/><rect x="14" y="15" width="7" height="6" rx="1.5"/><path d="M10 6h3.5A2.5 2.5 0 0 1 16 8.5V15"/></svg>
+            <h3>Workflow automation</h3>
+            <p>Zapier, n8n and HubSpot workflows that generate documents, onboard clients and keep teams informed.</p>
+          </li>
+          <li data-reveal style="--d:1">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
+            <h3>Custom integrations</h3>
+            <p>Custom code and REST API connections for what no-code can’t handle: lookups, data transformation and complex logic.</p>
+          </li>
+          <li data-reveal style="--d:2">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l4.5 4.5L20 6"/><path d="M4 6h8M4 19h16" opacity=".55"/></svg>
+            <h3>Audits and optimisation</h3>
+            <p>Reviews of existing automations and databases that fail, run slowly or have grown harder to maintain than they should be.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <h2>How I work</h2>
+          <p class="section-intro">A clear process, so you know what happens at every stage.</p>
+        </div>
+        <ol class="process">
+          <li data-reveal style="--d:0">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Map the process</h3>
+            <p>I learn how the task is done today, where time is lost, and which systems are involved.</p>
+          </li>
+          <li data-reveal style="--d:1">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Design the workflow</h3>
+            <p>I plan the triggers, steps and error handling, and confirm the plan with you before building.</p>
+          </li>
+          <li data-reveal style="--d:2">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Build and test</h3>
+            <p>I build in the right tool and test with real-world cases, including what happens when something fails.</p>
+          </li>
+          <li data-reveal style="--d:3">
+            <span class="step-num" aria-hidden="true">4</span>
+            <h3>Hand over</h3>
+            <p>You get documentation and a walkthrough, so your team can understand and maintain it.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section-alt" id="about">
+      <div class="wrap about" data-reveal>
+        <!-- PHOTO: save your photo as images/profile.jpg and it shows up here.
+             If there's no photo, your initials show instead. -->
+        <div class="avatar-wrap">
+          <img class="avatar" src="images/profile.jpg" alt="Charles Adrian Atienza"
+               onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+          <div class="avatar" aria-hidden="true" hidden>CA</div>
+        </div>
+        <div class="about-body">
+          <h2>About me</h2>
+          <p>I’m Charles, an automation specialist and Computer Science graduate. Most recently I was a Junior Tech Specialist at The Professional Builder, where I built 25+ automations across HubSpot, Airtable, Zapier and Slack for a remote team in Australia and New Zealand.</p>
+          <p>I start by understanding how a task is done by hand today, then build an automation that’s simple to follow and easy for the team to maintain.</p>
+          <dl class="facts">
+            <div><dt>Based in</dt><dd>Silang, Cavite, Philippines</dd></div>
+            <div><dt>Experience</dt><dd>1–2 years in automation</dd></div>
+            <div><dt>Open to</dt><dd>Freelance projects and full-time roles</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner" data-reveal>
+        <div class="contact-copy">
+          <h2>Have a process that takes up your team’s week?</h2>
+          <p>Hiring, or have a project in mind? Tell me what you need and I’ll get back to you.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-light" href="mailto:atienza.works@gmail.com">Email me</a>
+          <a class="btn btn-outline-light" href="https://www.linkedin.com/in/adrianatienza/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="btn btn-outline-light" href="resume.pdf" data-resume hidden download>Download CV</a>
+          <p class="contact-email">
+            <span>atienza.works@gmail.com</span>
+            <button type="button" class="copy-btn" data-copy="atienza.works@gmail.com">Copy</button>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Charles Adrian Atienza</span>
+      <a href="#top" class="to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
