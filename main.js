@@ -3,16 +3,16 @@
   var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasIO = 'IntersectionObserver' in window;
 
-  /* ---------- Theme toggle (light by default) ---------- */
+  /* ---------- Theme toggle (dark by default, light on request) ---------- */
   var toggle = document.querySelector('.theme-toggle');
   function setThemeLabel() {
-    toggle.setAttribute('aria-label', root.dataset.theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    toggle.setAttribute('aria-label', root.dataset.theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
   }
   setThemeLabel();
   toggle.addEventListener('click', function () {
-    var dark = root.dataset.theme !== 'dark';
-    if (dark) root.dataset.theme = 'dark'; else delete root.dataset.theme;
-    try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+    var light = root.dataset.theme !== 'light';
+    if (light) root.dataset.theme = 'light'; else delete root.dataset.theme;
+    try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch (e) {}
     setThemeLabel();
   });
 

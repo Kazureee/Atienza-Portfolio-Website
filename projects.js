@@ -38,6 +38,22 @@ window.PROJECTS = [
   },
 
   {
+    title: "Coach lookup: a 51-step workflow down to 6",
+    summary: "One HubDB lookup replaced a separate branch for every coach, so adding a coach is a table edit instead of a workflow rebuild.",
+    context: "Built as Junior Tech Specialist",
+    tools: ["HubSpot Workflows", "HubDB", "Custom code (Node.js)"],
+    workflow: [
+      "HubSpot: Company enrolled",
+      "Custom code: Look up coach in HubDB",
+      "HubSpot: Update associated contacts",
+      "HubSpot: Update associated payment"
+    ],
+    problem: "Coach details were set on the company, but contacts and payments needed them too. The old workflow used one branch per coach, 10 in all, and became hard to maintain.",
+    solution: "A custom code step reads the assigned coach's name, email and meeting link from a HubDB table. Five edit steps then write them to every associated contact and the payment. I documented the pattern in an SOP.",
+    result: "The workflow went from 51 steps to 6. Adding or changing a coach is now a HubDB row edit, and workflows that hit the step limit can be merged."
+  },
+
+  {
     title: "HubSpot workflow cut from about 50 steps to 14",
     summary: "Rebuilt a workflow that copies client feedback scores from contacts to their companies, so it's faster to change and easier to debug.",
     context: "Built as Junior Tech Specialist",
@@ -51,6 +67,25 @@ window.PROJECTS = [
     problem: "Feedback scores were stored on contacts, but reporting happens at company level. The original workflow took around 50 steps to copy them across.",
     solution: "Rebuilt it with one step per field that writes directly to the associated company, for 14 steps in total.",
     result: "The same data reaches company records through a much simpler workflow that's easier to maintain."
+  },
+
+  {
+    title: "Referral program alerts",
+    summary: "When a referral form is submitted, the workflow logs it in a spreadsheet and notifies the team and both coaches.",
+    date: "2026-11",
+    context: "Built as Junior Tech Specialist",
+    tools: ["CRM workflows", "Google Sheets", "Slack"],
+    workflow: [
+      "Form: Referral form submitted",
+      "Google Sheets: Look up row",
+      "Google Sheets: Create row",
+      "Slack: Send notification",
+      "Notification: Performance coach",
+      "Notification: Success coach"
+    ],
+    problem: "Referrals had to be logged and passed on to the right people by hand.",
+    solution: "A workflow that starts on the referral form, checks and records the referral in a spreadsheet, posts to Slack and alerts the performance and success coaches.",
+    result: "Everyone who needs to act on a referral hears about it as soon as the form is submitted."
   },
 
   {
@@ -88,19 +123,19 @@ window.PROJECTS = [
   },
 
   {
-    title: "Coach details synced with custom code",
-    summary: "When a coach is assigned to a company, their name, email and booking link flow to every associated contact and payment record.",
-    context: "Built as Junior Tech Specialist",
-    tools: ["HubSpot Workflows", "Custom code", "HubDB"],
+    title: "Lead intake automation in n8n",
+    summary: "A personal build that takes lead form data from a webhook, cleans it and sends it to a CRM and Slack.",
+    context: "Personal project, in progress",
+    tools: ["n8n", "Docker", "Postman", "Webhooks"],
     workflow: [
-      "HubSpot: Company enrolled",
-      "Custom code: Look up coach details",
-      "HubSpot: Update associated contacts",
-      "HubSpot: Update associated payments"
+      "Webhook: Receive lead form data",
+      "n8n: Clean the fields",
+      "CRM: Send the lead",
+      "Slack: Send alert"
     ],
-    problem: "Coach details were set on the company, but contacts and payment records each needed them for emails and booking links.",
-    solution: "A company-level workflow with a custom code step that looks up the assigned coach in a HubDB table and returns their details, which the next steps write to every associated contact and payment.",
-    result: "Contacts always carry the right coach and booking link, without manual updates."
+    problem: "I wanted to apply what I already do in Zapier, such as webhooks, filters, CRM sync and alerts, in a self-hosted tool.",
+    solution: "I run n8n on my own machine with Docker and test the webhook in Postman with sample data. An SOP and a Loom walkthrough will follow, like my work projects.",
+    result: "Still being built, and the main way I'm learning n8n."
   }
 
 ];
