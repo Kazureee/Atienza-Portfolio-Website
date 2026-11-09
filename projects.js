@@ -125,6 +125,25 @@ window.PROJECTS = [
   },
 
   {
+    title: "Video library migration from Vimeo to Livid",
+    summary: "A Zap that takes the new video link from a tracking record and uses the community platform's API to update the matching post.",
+    date: "2026-10",
+    context: "Built as Junior Tech Specialist",
+    value: "Automates a bulk content move",
+    impact: [["14", "test runs in 30 days before go-live"]],
+    tools: ["Zapier", "Airtable", "Webhooks", "Custom code (JavaScript)", "Circle API"],
+    workflow: [
+      "Airtable: Record updated with the new video link",
+      "Webhooks: Send a GET request",
+      "Custom code: Fetch the live post by its ID",
+      "Custom code: Update the post with the new link"
+    ],
+    problem: "Moving videos to a new host meant opening each community post and swapping the video by hand.",
+    solution: "The Zap starts when an Airtable record gets its new link. A JavaScript step calls the community platform's admin API with the post ID and updates the post.",
+    result: "Posts can be updated from a tracking table instead of one by one. I tested it across 14 runs before using it."
+  },
+
+  {
     title: "Staff onboarding that sets itself up",
     summary: "When an onboarding task reaches a new phase, Asana tags the stage and creates that phase's checklist automatically.",
     date: "2026-09",
@@ -186,6 +205,5 @@ window.PROJECTS = [
 
   Referral program alerts: form -> Google Sheets row -> Slack + coach alerts. Small and common, so it adds little.
   Automated performance review one-pagers: Airtable -> Google Docs template. Same pattern as the contract project.
-  Vimeo to Circle video migration (Zap with custom JavaScript calling the Circle API): good technical depth but unclear business result. Add it if you can name the outcome.
   Pay rise request form, Women in Construction event board, Tech SOP library: supporting work, better mentioned in your CV.
 */
