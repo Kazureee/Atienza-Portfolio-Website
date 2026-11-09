@@ -216,3 +216,14 @@ footer { padding-block: 1.75rem; color: var(--muted); font-size: .9rem; border-t
   .process { grid-template-columns: 1fr; gap: 1.75rem; }
   .hero h1 { font-size: clamp(2.4rem, 11vw, 3.4rem); }
 }
+
+/* ---------- Project value badge and headline numbers ---------- */
+.project-value { margin: 0; width: fit-content; font-size: .85rem; font-weight: 600; color: var(--accent-text); background: var(--accent-soft); padding: .2rem .75rem; border-radius: 999px; }
+.impact { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .75rem 0; }
+.impact li { display: flex; flex-direction: column; padding: 0 1.25rem; border-left: 1px solid var(--line); }
+.impact li:first-child { padding-left: 0; border-left: 0; }
+.impact strong { font-size: 1.35rem; font-weight: 600; line-height: 1.2; }
+.impact span { font-size: .85rem; color: var(--muted); max-width: 14rem; }
+@media (min-width: 52rem) {
+  .project.featured .project-body > .impact, .project.featured .project-body > .project-value { grid-column: 1; }
+}

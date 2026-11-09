@@ -108,6 +108,12 @@
              '<span class="mf-step">' + esc(str.slice(i + 1).trim()) + '</span></li>';
     }).join('') + '</ol>';
   }
+  function impact(items) {
+    if (!items || !items.length) return '';
+    return '<ul class="impact" aria-label="Impact">' + items.slice(0, 3).map(function (it) {
+      return '<li><strong>' + esc(it[0]) + '</strong><span>' + esc(it[1]) + '</span></li>';
+    }).join('') + '</ul>';
+  }
   function card(p) {
     var tags = (p.tools || []).map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('');
     var rows = [['The problem', p.problem], ['What I built', p.solution], ['The result', p.result]]
@@ -118,7 +124,9 @@
       '<div class="project-body">' +
         '<div><h3>' + esc(p.title) + '</h3>' +
         ((p.date || p.context) ? '<p class="project-date">' + [formatDate(p.date), p.context].filter(Boolean).join(', ') + '</p>' : '') + '</div>' +
+        (p.value ? '<p class="project-value">' + esc(p.value) + '</p>' : '') +
         (p.summary ? '<p class="project-summary">' + esc(p.summary) + '</p>' : '') +
+        impact(p.impact) +
         workflow(p.workflow) +
         (tags ? '<ul class="tags" aria-label="Tools used">' + tags + '</ul>' : '') +
         (rows ? '<details><summary>How it works</summary><dl>' + rows + '</dl></details>' : '') +
